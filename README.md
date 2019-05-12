@@ -1,6 +1,6 @@
-# Native HLS Extension
+# Native FLV Extension
 
-Allows HLS playback in chrome and firefox browsers
+Allows FLV playback in chrome and firefox browsers
 
 # Usage
 
@@ -15,9 +15,9 @@ The extension can be disabled by clicking on the icon if the request filter on m
 # Some Developer Notes 
 
 By default, the browser downloads any m3u8 files that were requested. This plugin checks any links to see if they are m3u8.
-If that's the case, it opens a new tab on a video player that uses the [hlsjs][] library. This extension is just a wrapper of [hlsjs][] for chrome.
+If that's the case, it opens a new tab on a video player that uses the [flvjs][] library. This extension is just a wrapper of [flvjs][] for chrome.
 
-[hlsjs]: https://github.com/dailymotion/hls.js
+[flvjs]: https://github.com/dailymotion/hls.js
 
 #License
 Released under [Apache 2.0 License](LICENSE)

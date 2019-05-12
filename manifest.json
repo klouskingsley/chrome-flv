@@ -1,14 +1,14 @@
 {
-  "name": "Native HLS Playback",
+  "name": "Native FLV Playback",
   "version": "0.12.4",
-  "description": "Allow the browser to play HLS video urls (m3u8) 'natively'",
+  "description": "Allow the browser to play FLV video urls (flv) 'natively'",
   "manifest_version": 2,
   "icons": { "128": "img/icon128.png" },
   "background": { "scripts": [ "event.js", "global.js"] },
   "content_security_policy": "script-src 'self' blob:; object-src 'self'",
   "permissions": [
     "tabs",
-    "*://*/*.m3u8*",
+    "*://*/*.flv*",
     "webRequest",
     "webRequestBlocking",
     "storage"
@@ -26,5 +26,5 @@
     "*.js",
     "*.html"
   ],
-  "omnibox": { "keyword" : "m3u8" }
+  "omnibox": { "keyword" : "flv" }
 }

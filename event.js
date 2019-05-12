@@ -13,7 +13,7 @@ chrome.runtime.onMessage.addListener(
 
 chrome.webRequest.onBeforeRequest.addListener(	
   function(info) {
-    if (enabled && info.url.split("?")[0].split("#")[0].endsWith(".m3u8")) {
+    if (enabled && info.url.split("?")[0].split("#")[0].endsWith(".flv")) {
       var playerUrl = chrome.runtime.getURL('player.html') + "#" + info.url
       if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
         chrome.tabs.update(info.tabId, {url: playerUrl});
@@ -23,7 +23,7 @@ chrome.webRequest.onBeforeRequest.addListener(
       }
     }
   },
-  {urls: ["*://*/*.m3u8*"], types:["main_frame"]},
+  {urls: ["*://*/*.flv*"], types:["main_frame"]},
   ["blocking"]
 );
 
